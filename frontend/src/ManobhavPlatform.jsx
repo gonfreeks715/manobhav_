@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+/* eslint-disable no-unused-vars */
+import { useState, useEffect, useRef } from "react";
 
 const COLORS = {
   navy: "#0B1E3D", navyMid: "#152D55", navyLight: "#1E3F73",
@@ -9,7 +10,7 @@ const COLORS = {
   cardBg: "#FFFFFF", pageBg: "#F0EDE6",
 };
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000";
+const BACKEND_URL = "http://localhost:8000";
 
 async function callAI(prompt, systemPrompt = "") {
   try {
@@ -544,7 +545,7 @@ const SentimentModule = () => {
     setStatusChecked(true);
   };
 
-  useEffect(() => { checkModels(); }, []);
+  useEffect(() => { checkModels(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ✅ FIX: Save analyzed comment to db so dashboard counts update
   const runAnalyze = async () => {

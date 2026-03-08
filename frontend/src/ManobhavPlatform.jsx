@@ -10,7 +10,7 @@ const COLORS = {
   cardBg: "#FFFFFF", pageBg: "#F0EDE6",
 };
 
-const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000";
 
 async function callAI(prompt, systemPrompt = "") {
   try {
@@ -1733,4 +1733,4 @@ export default function App() {
       </div>
     </div>
   );
-}
+}v

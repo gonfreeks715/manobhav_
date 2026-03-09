@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable */
 import { useState, useEffect, useRef } from "react";
 
 const COLORS = {
@@ -1733,4 +1733,4 @@ export default function App() {
       </div>
     </div>
   );
-}v
+}
